@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  background-color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* MENU LATERAL */
+.menu {
+  width: 70px;
+  height: 100%; /* ocupa toda altura */
+  background-color: #11228d;
+  padding: 20px;
+  color: #fff;
+  overflow: hidden;
+  transition: width 0.75s ease;
+  flex-shrink: 0; /* não encolhe */
+}
+
+.menu:hover {
+  width: 200px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+li {
+  padding: 10px 10px;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #3889f3;
+}
+
+.nav-link {
+  display: inline-flex;
+  column-gap: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.item-txt {
+  padding-left: 0.5rem;
+}
+
+.infocontato {
+  height: 380px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  background: #11228d;
+}
+
+/* CONTEÚDO */
+.conteudo {
+  margin-top: 20px; /* mais próximo do topo */
+  width: 700px;
+  margin: auto;
+  padding: 40px;
+  background-color: #ffffff;
+  color: #111;
+  position: relative;
+  border-radius: 0;
+  overflow: visible;
+  z-index: 1;
+  /* Centraliza o form */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical */
+  align-items: center; /* horizontal */
+  min-height: calc(100vh - 40px);
+  text-align: center; /* opcional: centraliza textos dentro do form */
+}
+
+.conteudo h4 {
+  color: rgb(142, 0, 0);
+}
+
+.conteudo form {
+  width: 100%;
+  max-width: 400px; /* limita a largura do form */
+}
+
+/* INPUTS */
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(230, 230, 230, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-radius: 35px;
+  font-size: 16px;
+  color: #000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: rgba(25, 50, 209, 0.7);
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: #002333;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: 0;
+  left: 15px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: #0b0f41;
+}
+
+/* BOTÃO ENVIAR */
+.enviar-btn {
+  width: 100%;
+  padding: 15px;
+  background: #11228d;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enviar-btn:hover {
+  background: rgba(17, 39, 183, 0.4);
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
